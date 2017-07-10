@@ -1,26 +1,14 @@
 <!--index.vtl-->
-<h1>Members list</h1>
-#if ($members)
-    <ul>
-        #foreach($member in $members)
-            <li>$member.getFirstName() $member.getLastName()</li>
-        #end
-    </ul>
+<h1>Startup Weekend Kirkland</h1>
+<h2>Friday, June 2, 2017 at 6:30pm through Sunday, June 4, 2017 at 8:30pm</h2>
+<p>Learn, Network, Startup In just 54 hours, you will experience the highs, lows, fun, and pressure that make up life at a startup. As you learn how to create a real company, you'll meet the very best mentors, investors, co-founders, and sponsors who are ready to help you get started.</p>
 
-#else
-    <p>No members yet</p>
+<h3>All Teams:</h3>
+<ul>
+    #foreach ($team in $teams)
+        <li><a href="/teams/$team.getId()">$team.getName()</a></li>
+    #end
+</ul>
 
-#end
-
-<p>Add a new Member:</p>
-
-<form action="/members" method="post">
-
-    <label for="firstName">First Name</label>
-    <input id="firstName" name="firstName" type="text">
-    <label for="lastName">Last Name</label>
-    <input id="lastName" name="lastName" type="text">
-
-    <button type="submit" class="btn btn-default">Add a Member</button>
-</form>
+<a href="/teams/new">Add a new team</a>
 <!--index.vtl-->

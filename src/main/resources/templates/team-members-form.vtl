@@ -1,0 +1,18 @@
+<!--team-members-form.vtl-->
+<h1>Add a member to $team.getName()</h1>
+
+<form action="/members" method="post">
+    <input id="teamId" name="teamId" type="hidden" value="$team.getId()">
+
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" class="form-control">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" class="form-control">
+        <label for="role">Role</label>
+        <input id="role" name="role" type="text" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-success">Add member</button>
+</form>
+<!--team-members-form.vtl-->
