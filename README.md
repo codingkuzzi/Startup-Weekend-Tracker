@@ -14,6 +14,8 @@ Web java application that allows a Startup Weekend coordinator to track teams an
 
 ## Setup/Installation Requirements
 
+* _Working website on Heroku http://my-startup-weekend-tracker.herokuapp.com/_
+
 * _Clone the project from Github._
 * _Navigate to the project folder.  On the terminal, type "gradle run", then enter the following in the browser's URL bar: http://localhost:4567/._
 
